@@ -11,12 +11,14 @@ export class CockpitComponent implements OnInit {
   // Two-way binding
   // newServerName = '';
   // newServerContent = '';
-  
+
   // ViewChild Binding
   @ViewChild('serverContentInput') serverContentInput: ElementRef;
-  constructor() { }
+  constructor() { 
+  }
 
   ngOnInit() {
+    
   }
 
   onAddServer(nameInput: HTMLInputElement){
