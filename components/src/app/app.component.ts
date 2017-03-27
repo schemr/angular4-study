@@ -6,23 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  serverElements = [];
-  newServerName = '';
-  newServerContent = '';
+  serverElements = [{type:'server', name:'Test server', content: 'just content'}];
 
   onAddServer() {
-    this.serverElements.push({
-      type: 'server',
-      name: this.newServerName,
-      content: this.newServerContent
-    });
+    // this.serverElements.push({
+    //   type: 'server',
+    //   name: this.newServerName,
+    //   content: this.newServerContent
+    // });
   }
 
   onAddBlueprint() {
-    this.serverElements.push({
-      type: 'blueprint',
-      name: this.newServerName,
-      content: this.newServerContent
-    });
+    // this.serverElements.push({
+    //   type: 'blueprint',
+    //   name: this.newServerName,
+    //   content: this.newServerContent
+    // });
   }
 }
