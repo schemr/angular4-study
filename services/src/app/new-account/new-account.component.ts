@@ -8,7 +8,11 @@ import { Component } from '@angular/core';
 })
 export class NewAccountComponent {
 
-  constructor(private accountsService: AccountsService){}
+  constructor(private accountsService: AccountsService){
+    this.accountsService.statusUpdated.subscribe(
+      (status: string) => alert('Change Status: '+ status)
+    );
+  }
 
   onCreateAccount(accountName: string, accountStatus: string) {
     this.accountsService.addAccount(accountName, accountStatus);
