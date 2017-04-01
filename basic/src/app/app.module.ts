@@ -8,6 +8,7 @@ import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { BasicHighlightDirective } from './basic-highlight.directive';
 import { BetterHighlightDirective } from './better-highlight.directive';
+import { UnlessDirective } from './unless.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { BetterHighlightDirective } from './better-highlight.directive';
     ServerComponent,
     ServersComponent,
     BasicHighlightDirective,
-    BetterHighlightDirective
+    BetterHighlightDirective,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,
