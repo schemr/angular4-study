@@ -6,7 +6,8 @@ import {
   style,
   transition,
   animate,
-  keyframes
+  keyframes,
+  group
 } from '@angular/animations';
 
 @Component({
@@ -100,13 +101,18 @@ import {
         ]))
       ]),
       transition('* => void', [
-        animate(300, style({
-          transform: 'translateX(+100px)',
-          opacity: 0
-        }))
+        group([
+          animate(300, style({
+            color: 'red'
+          })),
+          animate(300, style({
+            transform: 'translateX(+100px)',
+            opacity: 0
+          }))
+        ])
       ])
     ])
-		]
+	]
 })
 export class AppComponent {
 	state = 'normal';
