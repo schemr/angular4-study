@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  list = ['Milk', 'Sugar', 'Bread'];
+
+	onAdd(item) {
+		this.list.push(item);
+	}
+
+	onDelete(item) {
+		this.list.splice(this.list.indexOf(item), 1);
+	}
 }
